@@ -32,7 +32,7 @@ const Home: NextPage = () => {
       </Head>
 
       <ToastContainer />
-      <div className="container">
+      <div className="hero">
         <div className="title">Metro Retro Report</div>
         <div className="subtitle">
           Convert your JSON export into text format
@@ -41,6 +41,7 @@ const Home: NextPage = () => {
         <UploadButton onChange={onChange} />
       </div>
       <div className="report">
+        {report && <div className="title">Your report</div>}
         <pre>{report}</pre>
       </div>
     </>

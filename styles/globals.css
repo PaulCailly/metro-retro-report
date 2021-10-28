@@ -14,7 +14,7 @@ a {
   box-sizing: border-box;
 }
 
-.container {
+.hero {
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ a {
   color: #ffffff;
 }
 
-.container button {
+.hero button {
   text-align: center;
   display: inline-block;
   position: relative;
@@ -46,15 +46,15 @@ a {
   cursor: pointer;
 }
 
-.container button:hover {
+.hero button:hover {
   box-shadow: 0rem 0.5rem 1rem rgb(0 0 0 / 16%), 0rem 0rem 1rem 0.3rem #0e2f9b;
 }
 
-.container input {
+.hero input {
   display: none;
 }
 
-.title {
+.hero .title {
   display: block;
   font-size: 3rem;
   font-weight: 500;
@@ -62,7 +62,7 @@ a {
   text-decoration: none;
 }
 
-.subtitle {
+.hero .subtitle {
   padding: 0 1 rem;
   line-height: 1.5em;
   font-weight: 400;
@@ -73,6 +73,14 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.report .title {
+  color: #40b8a8;
+  margin-top: 4.5rem;
+  font-size: 2rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 
 .report pre {
