@@ -32,6 +32,9 @@ const Home: NextPage = () => {
       </Head>
 
       <ToastContainer />
+      <div className="disclaimer">
+        Are you really using this on your phone ? 🤔
+      </div>
       <div className="hero">
         <div className="title">Metro Retro Report</div>
         <div className="subtitle">
