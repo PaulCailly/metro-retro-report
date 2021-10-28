@@ -28,7 +28,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>MetroRetro Reports</title>
+        <title>Metro Retro Report</title>
       </Head>
 
       <ToastContainer />
