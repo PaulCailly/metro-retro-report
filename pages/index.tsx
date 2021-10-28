@@ -2,6 +2,7 @@ import axios from "axios";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import UploadButton from "../components/UploadButton";
 
 const Home: NextPage = () => {
@@ -13,26 +14,36 @@ const Home: NextPage = () => {
     });
 
     setReport(response.data.data);
+    navigator.clipboard.writeText(response.data.data);
+    toast("📋 Copied to clipboard", {
+      position: "top-right",
+      hideProgressBar: true,
+      autoClose: 3000,
+      closeOnClick: true,
+      closeButton: false,
+      className: "toast",
+    });
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>MetroRetro Reports</title>
-        <meta
-          name="description"
-          content="Create text reports from MetroRetro"
-        />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <div>
-          <UploadButton onChange={onChange} />
-          <pre>{report}</pre>
+      <ToastContainer />
+      <div className="container">
+        <div className="title">Metro Retro Report</div>
+        <div className="subtitle">
+          Convert your JSON export into text format
         </div>
+
+        <UploadButton onChange={onChange} />
       </div>
-    </div>
+      <div className="report">
+        <pre>{report}</pre>
+      </div>
+    </>
   );
 };
 
